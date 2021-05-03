@@ -47,7 +47,7 @@ public class e {
 		t2 = System.nanoTime();
 		System.out.println(b);
 		
-		long tg = t2-t1;
+		double tg = t2-t1;
 		
 		if(tg >= 1000) {
 			tg = tg/1000;
