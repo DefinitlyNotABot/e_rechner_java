@@ -15,35 +15,24 @@ public class e {
 		
 		t1 = System.nanoTime();
 		
-		long[] amount = new long[(int) x];
 		double y = 0;
 		int z = 0;
-		double a = 0;
+		double b = 0;
 		
 		for(long i = 0; i < x; i++) {
 			
 			while(y < 1) {
-				a = rnd.nextDouble();
-				while(a <= 0 && a >= 1) {
-					a = rnd.nextDouble();
-					System.out.println(a);
-				}
-				y += a;
+
+				y += rnd.nextDouble();
 				z++;
 			}
-			amount[(int) i] += z;
-			z=0;
-			y=0;
-			
+
+			b = b+z;
+
+			z = 0;
+			y = 0;
 		}
-		
-		double b = 0;
-		
-		for(int i = 0; i < x; i++) {
-			b += amount[i];
-		}
-		b = b/amount.length;
-		
+		b = b/x;
 		t2 = System.nanoTime();
 		System.out.println(b);
 		
